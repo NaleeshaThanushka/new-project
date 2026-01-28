@@ -1,5 +1,6 @@
 package com.example;
 
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -8,26 +9,25 @@ import java.util.List;
 @RestController
 @RequestMapping("api/v1/software-engineers")
 
-public class SoftwareEngineerController {
-
+public class SoftwareEngineerController{
+    @GetMapping
     public List<SoftwareEngineer> getEngineers(){
         return List.of(
                 new SoftwareEngineer(
                         1,
                         "Naleesha",
-                        "js,node, React"
+                        "js,Java"
                 ),new SoftwareEngineer(
                         2,
-                        "Saman",
-                        "js,node, React"
+                        "Thanushka",
+                        "js,HTML, CSS"
                 ),new SoftwareEngineer(
-                        1,
-                        "Kamal",
-                        "java, html, css"
+                        3,
+                        "Devinda",
+                        "js,react"
                 )
-
         );
     }
 
-
 }
+
